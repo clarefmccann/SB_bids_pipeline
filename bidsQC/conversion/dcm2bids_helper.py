@@ -19,7 +19,7 @@ def main():
         if cfg.run_local:
             cmd = 'dcm2bids_helper -d {path_dicoms}/{test_subject} -b {path_bidsdata}'.format(path_dicoms=cfg.path_dicoms, test_subject=cfg.test_subject, path_bidsdata=cfg.path_bidsdata)
         else:
-            cmd = 'module load singularity; sbatch --job-name helper_{test_subject} -A {account} --partition=short --time 00:60:00 --mem-per-cpu=2G --cpus-per-task=1 -o {logdir}/{test_subject}_helper_output.txt -e {logdir}/{test_subject}_helper_error.txt --wrap="singularity exec -B {path_dicoms} -B {path_toplevel} {image} dcm2bids_helper -d {path_dicoms}/{test_subject} -o {path_bidsdata}"'.format(path_dicoms=cfg.path_dicoms, test_subject=cfg.test_subject, path_bidsdata=cfg.path_bidsdata, account=cfg.group, image=cfg.singularity_image, logdir=cfg.logdir, path_toplevel=cfg.path_toplevel)
+            cmd = 'module load singularity/; qsub -b y -M $USER@mail  -l h_rt=1:00:00,h_data=1G -pe shared 2 -o {logdir}/{test_subject}_helper_output.txt -j y /u/local/apps/singularity/3.8.5/bin/singularity exec -B {path_dicoms} -B {path_toplevel} {image} dcm2bids_helper -d {path_dicoms}/{test_subject} -o {path_bidsdata}'.format(path_dicoms=cfg.path_dicoms, test_subject=cfg.test_subject, path_bidsdata=cfg.path_bidsdata, account=cfg.group, image=cfg.singularity_image, logdir=cfg.logdir, path_toplevel=cfg.path_toplevel)
         subprocess.call([cmd], shell=True)
     else:
         write_to_errorlog(cfg.test_subject+os.linesep)

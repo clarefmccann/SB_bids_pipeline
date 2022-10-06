@@ -2,12 +2,14 @@ import os
 
 ######################## CONFIGURABLE PART BELOW ########################
 
-group = "sanlab" # This is the name of the group on Talapas to which your account belongs
+group = "silvers" # This is the name of the group on Talapas to which your account belongs
+## change time point, subject ID, date
+dicom="T4/SB004/PRISMA_FIT_MRC35343/20220916"
 
 # Directories
 # You don't need to use slashes in the path names, just put the parts of the path in quotes as shown below.
-path_toplevel = os.path.join(os.sep, "projects", "sanlab", "shared", "studyName") # folder that contains path_bidsdata and path_conversionfolder
-path_dicoms = os.path.join(os.sep, "projects", "lcni", "dcm", "sanlab", "Berkman", "REV")
+path_toplevel = os.path.join(os.sep, "u", "project", "silvers", "data", "scripts", "SB_bids_pipeline") # folder that contains path_bidsdata and path_conversionfolder
+path_dicoms = os.path.join(os.sep, "u", "project", "silvers", "data", "SB", "dicom", dicom)
 path_bidsdata = os.path.join(path_toplevel, "bids_data") # path to the folder where the niftis will be put
 path_conversionfolder = os.path.join(path_toplevel, "bidsQC", "conversion") # Contains subject_list.txt, config file, and dcm2bids_batch.py
 logdir = os.path.join(path_conversionfolder, "logs_helper") # Path to the folder where logs will be created
@@ -17,10 +19,10 @@ outputlog = os.path.join(logdir, "outputlog_helper.txt")
 errorlog = os.path.join(logdir, "errorlog_helper.txt")
 
 # Test subject
-test_subject = "REV027_20150518_102229" # Name of a directory that contains DICOMS for one participant. Must be subfolder of pathToDicomsFolder. E.g. pathToDicomsFolder/S001
+test_subject = "SILVERSGROUP_SBCONT_1" # Name of a directory that contains DICOMS for one participant. Must be subfolder of pathToDicomsFolder. E.g. pathToDicomsFolder/S001
 
 # Run on local machine (run_local = True) or high performance cluster with slurm (run_local = False)
 run_local = False
 
 # If run_local is set to false, enter the path for the singularity image. Else, set to "NA"
-singularity_image =  os.path.join(os.sep, "projects", "sanlab", "shared", "containers", "Dcm2Bids-master.simg")
+singularity_image =  os.path.join(os.sep, "u", "project", "silvers", "data", "scripts", "containers", "dcm2bids_2022-09-29.sif")
