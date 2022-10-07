@@ -2,305 +2,139 @@
     "descriptions": [
         {
             "dataType": "anat",
-            "modalityLabel": "T1w",
+            "modalityLabel": "MR",
             "criteria": {
-                "SeriesDescription": "mprage1*"
+                "SeriesDescription": "T1w_MPR*",
+                "ImageType": "["ORIGINAL", "PRIMARY", "M", "ND", "NORM"]"
+
             }
         },
         {
-            "dataType": "anat",
-            "modalityLabel": "T1w",
-            "criteria": {
-                "SeriesDescription": "mprage2*"
-            }
-        },
-        {
-            "dataType": "func",
+            "dataType": "rest",
             "modalityLabel": "bold",
-            "customLabels": "task-sst1",
             "criteria": {
-                "SeriesDescription": "SST1*"
+                "SeriesDescription": "rfMRI_Rest*"
+            }
+        },
+        {
+           "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-TGNG1",
+            "criteria": {
+                "SeriesDescription": "tfMRI_TGNG*"
             },
             "sidecarChanges": {
-                "TaskName": "sst"
+            	"TaskName": "TGNG1"
             }
         },
         {
-            "dataType": "func",
+          "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-sst2",
+            "customLabels": "task-TGNG2",
             "criteria": {
-                "SeriesDescription": "SST2*"
+                "SeriesDescription": "tfMRI_TGNG*"
             },
             "sidecarChanges": {
-                "TaskName": "sst"
+            	"TaskName": "TGNG2"
             }
         },
         {
-            "dataType": "func",
+         "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-sst3",
+            "customLabels": "task-REAPP1",
             "criteria": {
-                "SeriesDescription": "SST3*"
+                "SeriesDescription": "tfMRI_Reappraisal*"
             },
             "sidecarChanges": {
-                "TaskName": "sst"
+            	"TaskName": "Reappraisal1"
             }
         },
-        {
-            "dataType": "func",
+        }
+        "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-sst4",
+            "customLabels": "task-REAPP2",
             "criteria": {
-                "SeriesDescription": "SST4*"
+                "SeriesDescription": "tfMRI_Reappraisal*"
             },
             "sidecarChanges": {
-                "TaskName": "sst"
+            	"TaskName": "Reappraisal2"
             }
         },
-        {
-            "dataType": "func",
+        }
+        "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-gng1",
+            "customLabels": "task-REAPP3",
             "criteria": {
-                "SeriesDescription": "GNG1*"
+                "SeriesDescription": "tfMRI_Reappraisal*"
             },
             "sidecarChanges": {
-                "TaskName": "gng"
+            	"TaskName": "Reappraisal3"
             }
         },
-        {
-            "dataType": "func",
+        }
+        "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-gng2",
+            "customLabels": "task-REAPP4",
             "criteria": {
-                "SeriesDescription": "GNG2*"
+                "SeriesDescription": "tfMRI_Reappraisal*"
             },
             "sidecarChanges": {
-                "TaskName": "gng"
+            	"TaskName": "Reappraisal4"
             }
         },
-        {
-            "dataType": "func",
+        }
+        "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-gng3",
+            "customLabels": "task-COND",
             "criteria": {
-                "SeriesDescription": "GNG3*"
+                "SeriesDescription": "tfMRI_Conditioning*"
             },
             "sidecarChanges": {
-                "TaskName": "gng"
+            	"TaskName": "Conditioning"
             }
         },
-        {
-            "dataType": "func",
+        }
+        "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "task-gng4",
+            "customLabels": "task-Flanker",
             "criteria": {
-                "SeriesDescription": "GNG4*"
+                "SeriesDescription": "tfMRI_Flanker*"
             },
             "sidecarChanges": {
-                "TaskName": "gng"
+            	"TaskName": "Flanker"
             }
         },
-                {
-            "dataType": "func",
-            "modalityLabel": "bold",
-            "customLabels": "task-react1",
+        }
+        "dataType": "dwi",
+            "modalityLabel": "acq-rl",
+            "customLabels": "dti-b0-ap",
             "criteria": {
-                "SeriesDescription": "React1*"
-            },
-            "sidecarChanges": {
-                "TaskName": "react"
-            }
+                "SeriesDescription": "*dMRI_dir98_AP_SBRef*"
         },
-        {
-            "dataType": "func",
-            "modalityLabel": "bold",
-            "customLabels": "task-react2",
+        }
+        "dataType": "dwi",
+            "modalityLabel": "acq-rl",
+            "customLabels": "dti-98-ap",
             "criteria": {
-                "SeriesDescription": "React2*"
-            },
-            "sidecarChanges": {
-                "TaskName": "react"
-            }
+                "SeriesDescription": "*dMRI_dir98_AP*",
+
         },
-        {
-            "dataType": "func",
-            "modalityLabel": "bold",
-            "customLabels": "task-react3",
+        }
+        }
+        "dataType": "dwi",
+            "modalityLabel": "acq-lr",
+            "customLabels": "dti-b0-pa",
             "criteria": {
-                "SeriesDescription": "React3*"
-            },
-            "sidecarChanges": {
-                "TaskName": "react"
-            }
+                "SeriesDescription": "*dMRI_dir98_PA_SBRef*"
         },
-        {
-            "dataType": "func",
-            "modalityLabel": "bold",
-            "customLabels": "task-react4",
+        }
+        "dataType": "dwi",
+            "modalityLabel": "acq-lr",
+            "customLabels": "dti-98-pa",
             "criteria": {
-                "SeriesDescription": "React4*"
-            },
-            "sidecarChanges": {
-                "TaskName": "react"
-            }
+                "SeriesDescription": "*dMRI_dir98_PA*",
+
         },
-                {
-            "dataType": "func",
-            "modalityLabel": "bold",
-            "customLabels": "task-bart",
-            "criteria": {
-                "SeriesDescription": "BART1*"
-            },
-            "sidecarChanges": {
-                "TaskName": "bart"
-            }
-        },
-        {
-            "dataType": "func",
-            "modalityLabel": "bold",
-            "customLabels": "task-bart",
-            "criteria": {
-                "SeriesDescription": "BART2*"
-            },
-            "sidecarChanges": {
-                "TaskName": "bart"
-            }
-        },
-        {
-            "dataType": "fmap",
-            "modalityLabel": "phasediff",
-            "customLabels": "",
-            "criteria": {
-                "SidecarFilename": "*fieldmap1_*_e2*",
-                "ProtocolName": "fieldmap1",
-                "ImageType": ["ORIGINAL", "PRIMARY", "P", "ND", "PHASE"]
-            },
-            "intendedFor": 0
-        },
-        {
-            "dataType": "fmap",
-            "modalityLabel": "magnitude2",
-            "customLabels": "",
-            "criteria": {
-                "SidecarFilename": "*fieldmap1_*_e2*",
-                "ProtocolName": "fieldmap1",
-                "EchoNumber": 2,
-                "EchoTime": 0.00683,
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "NORM"]
-            },
-            "intendedFor": 0
-        },
-        {
-            "dataType": "fmap",
-            "modalityLabel": "magnitude1",
-            "customLabels": "",
-            "criteria": {
-                "ProtocolName": "fieldmap1",
-                "EchoTime": 0.00437,
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "NORM"]
-            },
-            "intendedFor": 0
-        },
-        {
-            "dataType": "fmap",
-            "modalityLabel": "phasediff",
-            "customLabels": "",
-            "criteria": {
-                "ProtocolName": "fieldmap2",
-                "ImageType": ["ORIGINAL", "PRIMARY", "P", "ND", "PHASE"]
-            },
-            "intendedFor": 0
-        },
-        {
-            "dataType": "fmap",
-            "modalityLabel": "magnitude2",
-            "customLabels": "",
-            "criteria": {
-                "ProtocolName": "fieldmap2",
-                "EchoNumber": 2,
-                "EchoTime": 0.00683,
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "NORM"]
-            },
-            "intendedFor": 0
-        },
-        {
-            "dataType": "fmap",
-            "modalityLabel": "magnitude1",
-            "customLabels": "",
-            "criteria": {
-                "ProtocolName": "fieldmap2",
-                "EchoTime": 0.00437,
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "NORM"]
-            },
-            "intendedFor": 0
-        },
-                {
-            "dataType": "fmap",
-            "modalityLabel": "phasediff",
-            "customLabels": "",
-            "criteria": {
-                "ProtocolName": "fieldmap3",
-                "ImageType": ["ORIGINAL", "PRIMARY", "P", "ND", "PHASE"]
-            },
-            "intendedFor": 0
-        },
-        {
-            "dataType": "fmap",
-            "modalityLabel": "magnitude2",
-            "customLabels": "",
-            "criteria": {
-                "ProtocolName": "fieldmap3",
-                "EchoNumber": 2,
-                "EchoTime": 0.00683,
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "NORM"]
-            },
-            "intendedFor": 0
-        },
-        {
-            "dataType": "fmap",
-            "modalityLabel": "magnitude1",
-            "customLabels": "",
-            "criteria": {
-                "ProtocolName": "fieldmap3",
-                "EchoTime": 0.00437,
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "NORM"]
-            },
-            "intendedFor": 0
-        },
-                {
-            "dataType": "fmap",
-            "modalityLabel": "phasediff",
-            "customLabels": "",
-            "criteria": {
-                "ProtocolName": "fieldmap4",
-                "ImageType": ["ORIGINAL", "PRIMARY", "P", "ND", "PHASE"]
-            },
-            "intendedFor": 0
-        },
-        {
-            "dataType": "fmap",
-            "modalityLabel": "magnitude2",
-            "customLabels": "",
-            "criteria": {
-                "ProtocolName": "fieldmap4",
-                "EchoNumber": 2,
-                "EchoTime": 0.00683,
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "NORM"]
-            },
-            "intendedFor": 0
-        },
-        {
-            "dataType": "fmap",
-            "modalityLabel": "magnitude1",
-            "customLabels": "",
-            "criteria": {
-                "ProtocolName": "fieldmap4",
-                "EchoTime": 0.00437,
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "NORM"]
-            },
-            "intendedFor": 0
         }
     ]
 }
