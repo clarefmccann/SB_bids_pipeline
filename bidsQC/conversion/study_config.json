@@ -4,142 +4,129 @@
             "dataType": "anat",
             "modalityLabel": "T1w",
             "criteria": {
-                "SeriesDescription": "T1w_MPR*",
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "NORM"]
+                "SidecarFilename": "006*"
 
             }
         },
         {
-            "dataType": "rest",
+            "dataType": "func",
             "modalityLabel": "bold",
+            "customLabels": "task-rest",
             "criteria": {
-                "SeriesDescription": "rfMRI_Rest*"
+                "SidecarFilename": "008*"
+            },
+            "sidecarChanges": {
+                "TaskName": "rest"
             }
         },
         {
            "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "TGNG1",
+            "customLabels": "task-tgng_run-01",
             "criteria": {
-                "SeriesDescription": "tfMRI_TGNG*",
-                "SeriesNumber": 10
+                "SidecarFilename": "010*"
             },
             "sidecarChanges": {
-                "TaskName": "TGNG1"
+                "TaskName": "tgng"
             }
         },
         {
           "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "TGNG2",
+            "customLabels": "task-tgng_run-02",
             "criteria": {
-                "SeriesDescription": "tfMRI_TGNG*",
-                "SeriesNumber": 11
+                "SidecarFilename": "011*"
             },
             "sidecarChanges": {
-                "TaskName": "TGNG2"
+                "TaskName": "tgng"
             }
         },
         {
          "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "REAPP1",
+            "customLabels": "task-reapp_run-01",
             "criteria": {
-                "SeriesDescription": "tfMRI_Reappraisal*",
-                "SeriesNumber": 12
+                "SidecarFilename": "012*"
             },
             "sidecarChanges": {
-                "TaskName": "Reappraisal1"
+                "TaskName": "reapp"
             }
         },
         {
         "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "REAPP2",
+            "customLabels": "task-reapp_run-02",
             "criteria": {
-                "SeriesDescription": "tfMRI_Reappraisal*",
-                "SeriesNumber": 13
+                "SidecarFilename": "013*"
             },
             "sidecarChanges": {
-                "TaskName": "Reappraisal2"
+                "TaskName": "reapp"
             }
         },
         {
         "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "REAPP3",
+            "customLabels": "task-reapp_run-03",
             "criteria": {
-                "SeriesDescription": "tfMRI_Reappraisal*",
-                "SeriesNumber": 14
+                "SidecarFilename": "014*"
             },
             "sidecarChanges": {
-                "TaskName": "Reappraisal3"
+                "TaskName": "reapp"
             }
         },
         {
         "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "REAPP4",
+            "customLabels": "task-reapp_run-04",
             "criteria": {
-                "SeriesDescription": "tfMRI_Reappraisal*",
-                "SeriesNumber": 15
+                "SidecarFilename": "015*"
             },
             "sidecarChanges": {
-                "TaskName": "Reappraisal4"
+                "TaskName": "reapp"
             }
         },
         {
         "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "COND",
+            "customLabels": "task-cond",
             "criteria": {
-                "SeriesDescription": "tfMRI_Conditioning*"
-            },
-            "sidecarChanges": {
-                "TaskName": "Conditioning"
+                "SidecarFilename": "020*"
             }
         },
         {
         "dataType": "func",
             "modalityLabel": "bold",
-            "customLabels": "Flanker",
+            "customLabels": "task-flanker",
             "criteria": {
-                "SeriesDescription": "tfMRI_Flanker*"
-            },
-            "sidecarChanges": {
-                "TaskName": "Flanker"
+                "SidecarFilename": "021*"
             }
         },
         {
         "dataType": "dwi",
-            "modalityLabel": "acq-rl",
-            "customLabels": "dtib0ap",
+            "modalityLabel": "acq-b0ap",
             "criteria": {
-                "SeriesDescription": "*dMRI_dir98_AP_SBRef*"
+                "SidecarFilename": "022*"
                 }
         },
         {
         "dataType": "dwi",
-            "modalityLabel": "acq-rl",
-            "customLabels": "dti98ap",
+            "modalityLabel": "acq-98ap",
             "criteria": {
-                "SeriesDescription": "*dMRI_dir98_AP*"
+                "SidecarFilename": "023*"
                 }
         },
         {
         "dataType": "dwi",
-            "modalityLabel": "acq-lr",
-            "customLabels": "dtib0pa",
+            "modalityLabel": "acq-b0pa",
             "criteria": {
-                "SeriesDescription": "*dMRI_dir98_PA_SBRef*"
+                "SidecarFilename": "024*"
                 }
         },
         {
         "dataType": "dwi",
-            "modalityLabel": "acq-lr",
-            "customLabels": "dti98pa",
+            "modalityLabel": "acq-98pa",
             "criteria": {
-                "SeriesDescription": "*dMRI_dir98_PA*"
+                "SidecarFilename": "025*"
             }
 
         }
